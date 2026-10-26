@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卡皮学 AI · 两集动画课件</title>
+<style>
+:root{--paper:#f5eede;--paper2:#ece2cc;--ink:#2b2520;--mut:#7a6e60;--red:#c9573f;--blue:#4f7fae;--gold:#d8a642;--green:#5f9a6a;--violet:#8a6bb0;--line:#d9ccb2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",system-ui,sans-serif;line-height:1.75;font-size:18px;
+ background-image:radial-gradient(rgba(120,90,50,.06) 1px,transparent 1px);background-size:6px 6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header.hero{min-height:92vh;display:flex;align-items:center;padding:60px 0}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:30px;align-items:center}
+.kick{letter-spacing:5px;color:var(--red);font-size:14px;font-weight:700}
+h1{font-size:clamp(40px,7vw,84px);line-height:1.08;font-weight:900;margin:10px 0 16px}
+h1 small{display:block;font-size:.38em;color:var(--mut);font-weight:600;margin-top:8px}
+h2{font-size:clamp(28px,4.2vw,46px);line-height:1.2;font-weight:900;margin:6px 0 14px}
+h3{font-size:21px;margin-bottom:4px}
+.lead{font-size:20px;color:#4a4036;max-width:640px}
+.hero img{width:100%;max-width:300px;justify-self:center;filter:drop-shadow(0 18px 18px rgba(80,60,40,.18));animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-1.5deg)}}
+.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.toc a{color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font-weight:700;font-size:16px;background:#fff8;transition:.2s}
+.toc a:hover{background:var(--ink);color:var(--paper)}
+section{padding:70px 0;border-top:2px dashed var(--line)}
+.ep{display:inline-block;background:var(--ink);color:var(--paper);padding:2px 12px;border-radius:6px;font-weight:800;font-size:15px;letter-spacing:2px}
+.player{background:#1f1b17;border-radius:16px;padding:10px;box-shadow:0 18px 40px rgba(60,40,20,.2);margin:18px 0}
+video{width:100%;display:block;border-radius:10px;background:#000}
+.chap{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.chap button{font:inherit;font-size:15px;border:1.5px solid var(--line);background:#fffaf0;border-radius:10px;padding:6px 12px;cursor:pointer;color:var(--ink);transition:.15s}
+.chap button b{color:var(--red);margin-right:6px;font-variant-numeric:tabular-nums}
+.chap button:hover,.chap button.on{border-color:var(--ink);background:#fff}
+.chap button.on{box-shadow:0 0 0 2px var(--gold)}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:#fffaf0;border:2px solid var(--ink);border-radius:14px;padding:18px;box-shadow:5px 5px 0 var(--ink);position:relative}
+.card img{width:100%;border-radius:8px;border:1.5px solid var(--line);margin-bottom:10px;display:block}
+.card .tag{position:absolute;top:-13px;left:14px;background:var(--gold);border:2px solid var(--ink);border-radius:999px;font-size:13px;font-weight:800;padding:0 10px}
+.card p{font-size:16px;color:#4a4036}
+.src{font-size:13px;color:var(--mut);margin-top:8px}
+.big{font-size:40px;font-weight:900;line-height:1.1;color:var(--blue)}
+.note{background:#fff3d6;border-left:6px solid var(--gold);padding:14px 18px;border-radius:8px;margin:20px 0;font-size:17px}
+.quiz{margin-top:26px}
+.q{background:#fffaf0;border:2px solid var(--ink);border-radius:14px;padding:18px;margin-bottom:14px}
+.q h3{font-size:18px}
+.opts{display:grid;gap:8px;margin-top:10px}
+.opts button{font:inherit;font-size:16px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:10px 14px;cursor:pointer;color:var(--ink)}
+.opts button.ok{background:#e3f1df;border-color:var(--green)}
+.opts button.no{background:#f8e1da;border-color:var(--red)}
+.fb{font-size:15px;margin-top:8px;color:var(--mut);min-height:1em}
+table{width:100%;border-collapse:collapse;background:#fffaf0;border:2px solid var(--ink);border-radius:12px;overflow:hidden;font-size:16px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:var(--ink);color:var(--paper)}
+.host{display:flex;gap:16px;align-items:center;margin:18px 0}
+.host img{width:110px;flex:none}
+.bubble{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:12px 16px;position:relative;font-size:17px}
+.bubble:before{content:"";position:absolute;left:-12px;top:22px;border:10px solid transparent;border-right-color:var(--ink);border-left:0}
+.score{font-weight:800;color:var(--red)}
+footer{padding:50px 0 70px;text-align:center;color:var(--mut);font-size:14px;border-top:2px dashed var(--line)}
+.reveal{opacity:0;transform:translateY(28px);transition:.7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.hero img{max-width:200px}body{font-size:17px}}
+@media print{.player,.quiz{display:none}}
+</style></head><body>
+
+<header class="hero"><div class="wrap">
+ <div>
+  <div class="kick">KAPI LEARNS AI · 动画课件</div>
+  <h1>卡皮学 AI<small>两集动画 · 从“AI 是什么”到“用 AI 打开新世界”</small></h1>
+  <p class="lead">跟着头顶橘子的卡皮巴拉，先弄懂 AI 是怎么一步一步学会的，再看它怎样像一把钥匙，带我们走进宇宙、大海和人体。</p>
+  <div class="toc"><a href="#ep1">第一集 · 学会</a><a href="#ep2">第二集 · 打开新世界</a><a href="#compare">两集对照</a><a href="#act">课堂活动</a></div>
+ </div>
+ <img src="assets/media-01.png" alt="卡皮">
+</div></header>
+
+<section id="how"><div class="wrap reveal">
+ <h2>怎么使用这个课件</h2>
+ <div class="grid g3">
+  <div class="card"><span class="tag">1 看</span><h3>先完整看一遍</h3><p>每集不到 2 分钟。第一集没有旁白，只有手写字；第二集有英文旁白和中英字幕。</p></div>
+  <div class="card"><span class="tag">2 停</span><h3>按章节回看</h3><p>视频下方的章节按钮可以直接跳到对应画面，适合讲解时暂停提问。</p></div>
+  <div class="card"><span class="tag">3 想</span><h3>做小测验和活动</h3><p>每集后面有 3 道小题，最后有一个“画你自己的门”的课堂活动。</p></div>
+ </div>
+</div></section>
+
+<section id="ep1"><div class="wrap">
+ <div class="reveal"><span class="ep">第一集 · 56 秒</span><h2>卡皮学 AI：AI 不是魔法</h2>
+ <p class="lead">一支铅笔画出了卡皮。卡皮想知道“AI 是什么”，于是踩着数据、算法、神经网络三摞书往上爬，训练失败摔了下来，又顺着越来越低的 loss 曲线滑向成功。</p></div>
+ <div class="player reveal"><video id="v1" controls playsinline preload="metadata" poster="assets/media-02.jpg" src="assets/media-03.mp4"></video></div>
+ <div class="chap" data-v="v1">
+  <button data-t="0"><b>0:00</b>铅笔画出卡皮</button><button data-t="5.6"><b>0:05</b>AI 是什么？</button><button data-t="9.8"><b>0:10</b>数据·算法·神经网络</button>
+  <button data-t="20.4"><b>0:20</b>训练中</button><button data-t="26"><b>0:26</b>loss ↑ 失败</button><button data-t="29.2"><b>0:29</b>再试一次</button>
+  <button data-t="35.6"><b>0:35</b>成功，遇见机器人</button><button data-t="44.5"><b>0:44</b>一句话总结</button></div>
+ <div class="host reveal"><img src="assets/media-04.png" alt=""><div class="bubble">这一集只要记住一句话：<b>AI 不是魔法，是一步一步学会的。</b></div></div>
+ <div class="grid g2 reveal">
+  <div class="card"><span class="tag">知识点 1</span><img src="assets/media-05.jpg" alt=""><h3>数据 Data</h3><p>AI 学习用的“例子”。看过的例子越多、越好，学到的规律就越可靠。</p></div>
+  <div class="card"><span class="tag">知识点 2</span><img src="assets/media-06.jpg" alt=""><h3>算法与神经网络</h3><p>算法是“怎么学”的方法；神经网络是一层层连接的节点，学习时不断调整连接的强弱。</p></div>
+  <div class="card"><span class="tag">知识点 3</span><img src="assets/media-07.jpg" alt=""><h3>loss：错了多少</h3><p>loss 用来衡量 AI 的答案离正确答案有多远。曲线往上走，说明这次训练没学好。</p></div>
+  <div class="card"><span class="tag">知识点 4</span><img src="assets/media-08.jpg" alt=""><h3>训练：让 loss 变小</h3><p>失败很正常。调整、再试，一轮一轮（epochs）把 loss 降下来，AI 才慢慢学会。</p></div>
+ </div>
+ <div class="quiz" data-q="ep1">
+  <div class="q"><h3>1. 卡皮爬上去的三摞书分别是？</h3><div class="opts" data-a="1"><button>音乐、历史、数学</button><button>数据、算法、神经网络</button><button>宇宙、大海、人体</button></div><div class="fb"></div></div>
+  <div class="q"><h3>2. 训练时 loss 曲线往上走，意味着什么？</h3><div class="opts" data-a="0"><button>错得更多了，这次没学好</button><button>AI 已经学会了</button><button>数据太少了，没法训练</button></div><div class="fb"></div></div>
+  <div class="q"><h3>3. 卡皮最后是怎么成功的？</h3><div class="opts" data-a="2"><button>机器人直接告诉了它答案</button><button>它变出了魔法</button><button>失败后再试，loss 一点点降下来</button></div><div class="fb"></div></div>
+ </div>
+</div></section>
+
+<section id="ep2"><div class="wrap">
+ <div class="reveal"><span class="ep">第二集 · 2 分钟</span><h2>卡皮学 AI：打开新世界</h2>
+ <p class="lead">第二天，机器人朋友送给卡皮一把金钥匙。铅笔画出一扇扇门：水彩的宇宙、蜡笔的大海、蓝图里的心脏。最后，铅笔把自己交给了卡皮。</p></div>
+ <div class="player reveal"><video id="v2" controls playsinline preload="metadata" poster="assets/media-09.jpg" src="assets/media-10.mp4"></video></div>
+ <div class="chap" data-v="v2">
+  <button data-t="0"><b>0:00</b>回顾第一集</button><button data-t="8.6"><b>0:09</b>第二天</button><button data-t="12.2"><b>0:12</b>金钥匙和第一扇门</button>
+  <button data-t="25.4"><b>0:25</b>宇宙</button><button data-t="47.6"><b>0:48</b>大海</button><button data-t="72.6"><b>1:13</b>人体</button>
+  <button data-t="95.8"><b>1:36</b>更多的门</button><button data-t="100.6"><b>1:41</b>铅笔交给卡皮</button><button data-t="110.4"><b>1:50</b>一句话总结</button></div>
+ <div class="host reveal"><img src="assets/media-11.png" alt=""><div class="bubble">每扇门后面都是一个问题。<b>AI 是钥匙，好奇心才是门。</b></div></div>
+ <div class="grid g3 reveal">
+  <div class="card"><span class="tag">第一扇门 · 宇宙</span><img src="assets/media-09.jpg" alt=""><div class="big">384,400 km</div><p>月球到地球的平均距离约 38.4 万公里，中间大约能排下 30 个地球。</p><div class="src">来源：NASA Moon Facts</div></div>
+  <div class="card"><span class="tag">第二扇门 · 大海</span><img src="assets/media-12.jpg" alt=""><div class="big">≈ 33 m</div><p>蓝鲸是地球上有史以来最大的动物，最长可达约 110 英尺（约 33 米）。</p><div class="src">来源：NOAA Fisheries</div></div>
+  <div class="card"><span class="tag">第三扇门 · 人体</span><img src="assets/media-13.jpg" alt=""><div class="big">≈ 10 万次<small style="font-size:.5em"> / 天</small></div><p>心脏每天大约跳动 10 万次，一刻不停地把血液送往全身。</p><div class="src">来源：British Heart Foundation</div></div>
+ </div>
+ <div class="note reveal"><b>讲给学生听：</b>AI 能很快给出答案，但答案要<b>核对来源</b>。片中每个数字都查过权威机构（NASA、NOAA、英国心脏基金会）。用 AI 学知识，也要养成这个习惯。</div>
+ <div class="grid g2 reveal">
+  <div class="card"><span class="tag">画面的秘密</span><img src="assets/media-14.jpg" alt=""><h3>铅笔交给了卡皮</h3><p>第一集里，卡皮是被铅笔画出来的；第二集结尾，卡皮自己拿起笔画门。会提问、会动手的人，才能打开属于自己的门。</p></div>
+  <div class="card"><span class="tag">一句话总结</span><img src="assets/media-15.jpg" alt=""><h3>AI 是钥匙，好奇心才是门</h3><p>钥匙再好，也得先有想打开的门。先有好问题，AI 才派得上用场。</p></div>
+ </div>
+ <div class="quiz" data-q="ep2">
+  <div class="q"><h3>1. 月球离地球大约多远？</h3><div class="opts" data-a="2"><button>约 3.8 万公里</button><button>约 384 万公里</button><button>约 38.4 万公里</button></div><div class="fb"></div></div>
+  <div class="q"><h3>2. 地球上有史以来最大的动物是？</h3><div class="opts" data-a="0"><button>蓝鲸</button><button>恐龙</button><button>非洲象</button></div><div class="fb"></div></div>
+  <div class="q"><h3>3. “AI 是钥匙，好奇心才是门”想说什么？</h3><div class="opts" data-a="1"><button>有了 AI 就不用再学习了</button><button>先有想弄明白的问题，AI 才能帮我们打开它</button><button>门比钥匙更贵</button></div><div class="fb"></div></div>
+ </div>
+</div></section>
+
+<section id="compare"><div class="wrap reveal">
+ <h2>两集对照：卡皮的成长</h2>
+ <table><tr><th></th><th>第一集 · 学会</th><th>第二集 · 打开新世界</th></tr>
+  <tr><td><b>卡皮</b></td><td>被铅笔画出来</td><td>接过铅笔，自己画门</td></tr>
+  <tr><td><b>主题</b></td><td>AI 是怎么学会的</td><td>用 AI 去学更多知识</td></tr>
+  <tr><td><b>画风</b></td><td>全片钢笔淡彩</td><td>纸页钢笔淡彩 + 水彩宇宙、蜡笔大海、蓝图人体</td></tr>
+  <tr><td><b>声音</b></td><td>无旁白，手写中英字</td><td>英文旁白 + 中英字幕</td></tr>
+  <tr><td><b>一句话</b></td><td>AI 不是魔法，是一步一步学会的</td><td>AI 是钥匙，好奇心才是门</td></tr></table>
+</div></section>
+
+<section id="act"><div class="wrap reveal">
+ <h2>课堂活动：画一扇你自己的门</h2>
+ <div class="host"><img src="assets/media-16.png" alt=""><div class="bubble">明天，你想打开哪一扇门？</div></div>
+ <div class="grid g3">
+  <div class="card"><span class="tag">第 1 步</span><h3>想一个问题</h3><p>写下一个你真的好奇的问题，比如“为什么天是蓝的？”“鲸鱼怎么睡觉？”</p></div>
+  <div class="card"><span class="tag">第 2 步</span><h3>画成一扇门</h3><p>在纸上画一扇门，把问题写在门上，门后画出你猜的答案。</p></div>
+  <div class="card"><span class="tag">第 3 步</span><h3>用 AI 打开，再核对</h3><p>问一问 AI，再找一个可靠来源核对。说说：AI 说对了吗？哪里需要改？</p></div>
+ </div>
+ <p style="margin-top:22px">两集测验得分：<span class="score" id="total">0 / 6</span></p>
+</div></section>
+
+<footer>卡皮学 AI · 两集动画课件 · 动画由 lemo-opuscar 用代码绘制，角色姿势图为 AI 生成<br>知识来源：NASA · NOAA Fisheries · British Heart Foundation</footer>
+
+<script>
+document.querySelectorAll('.chap').forEach(c=>{const v=document.getElementById(c.dataset.v),bs=[...c.querySelectorAll('button')];
+ bs.forEach(b=>b.onclick=()=>{v.currentTime=+b.dataset.t;v.play();});
+ v.addEventListener('timeupdate',()=>{let k=0;bs.forEach((b,i)=>{if(v.currentTime>=+b.dataset.t-.05)k=i});bs.forEach((b,i)=>b.classList.toggle('on',i===k&&v.currentTime>0))});});
+let score=0;
+document.querySelectorAll('.opts').forEach(o=>{const a=+o.dataset.a,bs=[...o.querySelectorAll('button')],fb=o.nextElementSibling;let done=false;
+ bs.forEach((b,i)=>b.onclick=()=>{if(done)return;done=true;bs[a].classList.add('ok');if(i===a){fb.textContent='答对了！';score++}else{b.classList.add('no');fb.textContent='再看看视频里的这一段吧。'}document.getElementById('total').textContent=score+' / 6';});});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body></html>

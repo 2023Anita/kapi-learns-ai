@@ -1,0 +1,102 @@
+{
+  "source": "卡皮学AI课件.html",
+  "source_sha256": "39af4686e2babca05ff150a2f484379210842e9db70fa26409ea44486c8c3df2",
+  "assets": [
+    {
+      "file": "assets/media-01.png",
+      "mime": "image/png",
+      "bytes": 158075,
+      "sha256": "de25676fa8ba5acdcabd9c6c850f8ecda8c6de8f2dfcb60357f3e5ad3d0bb79f"
+    },
+    {
+      "file": "assets/media-02.jpg",
+      "mime": "image/jpeg",
+      "bytes": 17443,
+      "sha256": "c224a23a1dddc4a77c64b53c9e24c48b847a57106243f6f0b9fb844f3fc67ca2"
+    },
+    {
+      "file": "assets/media-03.mp4",
+      "mime": "video/mp4",
+      "bytes": 4921902,
+      "sha256": "e833d2dfd5b29dd18e842c1ed3d7f1c36eaa981d3c20156915a15e4a4655ad0e"
+    },
+    {
+      "file": "assets/media-04.png",
+      "mime": "image/png",
+      "bytes": 135886,
+      "sha256": "74ef25e0fc6461f0ead732454ee445075658ac37e24a9d8c429092a84e8b0599"
+    },
+    {
+      "file": "assets/media-05.jpg",
+      "mime": "image/jpeg",
+      "bytes": 13826,
+      "sha256": "841043ad586c59d4524543912e6630791f755dd96d5fa94f35a17f322cbb14d8"
+    },
+    {
+      "file": "assets/media-06.jpg",
+      "mime": "image/jpeg",
+      "bytes": 16270,
+      "sha256": "8e758e95ac74a25f885cab9fb24804533deb3374828f4d9c5e1442b0b88497f4"
+    },
+    {
+      "file": "assets/media-07.jpg",
+      "mime": "image/jpeg",
+      "bytes": 22281,
+      "sha256": "a47092396ebde7289362e1d2d650d847cb078533fe70d71a7d97f37ba72ce2a2"
+    },
+    {
+      "file": "assets/media-08.jpg",
+      "mime": "image/jpeg",
+      "bytes": 12925,
+      "sha256": "c1f7d3e3ae137d5ee268a4d4dfc18eb8c7c0024a0918a50e2ebdfaae76fffc50"
+    },
+    {
+      "file": "assets/media-09.jpg",
+      "mime": "image/jpeg",
+      "bytes": 27198,
+      "sha256": "5611127a08ea36afdfc75a97845077c1a8f83816683a4556493d0d80ebc5c7ff"
+    },
+    {
+      "file": "assets/media-10.mp4",
+      "mime": "video/mp4",
+      "bytes": 9940418,
+      "sha256": "49e0065bfe512efa49d334bdb33d65c13d56db806abdc73e48c11e90dbeedd9e"
+    },
+    {
+      "file": "assets/media-11.png",
+      "mime": "image/png",
+      "bytes": 141374,
+      "sha256": "68fcf09ff1c77f4d1df86afc6ba7b01c00e734eb02f52748058299177baf084f"
+    },
+    {
+      "file": "assets/media-12.jpg",
+      "mime": "image/jpeg",
+      "bytes": 49174,
+      "sha256": "c777068eb09945c6de6c27c0b3d497f5058e7b59aad376e5217ecdc0eaec88c4"
+    },
+    {
+      "file": "assets/media-13.jpg",
+      "mime": "image/jpeg",
+      "bytes": 30277,
+      "sha256": "91880afe07c0e47c15f84ded43ba350f7c04343732b4294d9d827af7945c8f0c"
+    },
+    {
+      "file": "assets/media-14.jpg",
+      "mime": "image/jpeg",
+      "bytes": 21855,
+      "sha256": "926857b3dd4564fea508652a96b07fd06f8fddc39028d82de592ae1e8b976fd9"
+    },
+    {
+      "file": "assets/media-15.jpg",
+      "mime": "image/jpeg",
+      "bytes": 17504,
+      "sha256": "7c60e360a5fd9f22419ea0cfdececc89bc09e0b9ec5d20924ed743c8c7e184b6"
+    },
+    {
+      "file": "assets/media-16.png",
+      "mime": "image/png",
+      "bytes": 143404,
+      "sha256": "0ca421568c3013bc8521a48f3befd0e99027ad1f65bb5d9563d8a3751d42240f"
+    }
+  ]
+}
